@@ -6,7 +6,7 @@ public class AnalyseurLexical {
     // 1. TYPES DE TOKENS 
 
     public enum TokenType {
-        // --- Mots-clés Structurels ---
+        // Mots-clés Structurels 
         FOR, IN, RANGE, 
         IF, ELSE, ELIF, 
         WHILE, 
@@ -15,7 +15,7 @@ public class AnalyseurLexical {
         BREAK, CONTINUE,
         PRINT,
 
-        // --- Opérateurs Logiques 
+        // Opérateurs Logiques 
         AND, OR, NOT,
 
         // Valeurs Booléennes 
@@ -52,9 +52,7 @@ public class AnalyseurLexical {
         }
     }
 
-    // ==========================================
-    // ATTRIBUTS
-    // ==========================================
+    
     private final String input;
     private final int length;
     private int pos = 0;
@@ -107,7 +105,7 @@ public class AnalyseurLexical {
     }
 
 
-    // GESTION INDENTATION (VOTRE FONCTION)
+    // GESTION INDENTATION
  
     public void verif_s_tab() {
     int d = 0; 
@@ -281,7 +279,7 @@ public class AnalyseurLexical {
         }
     }
 
-    // --- AUTRES UTILITAIRES ---
+    // AUTRES UTILITAIRES 
     private boolean fin() { return pos >= length; }
     private char avancer() { return input.charAt(pos++); }
     private void reculer() { if(pos > 0) pos--; }
@@ -312,6 +310,7 @@ public class AnalyseurLexical {
     }
 }
     
+
 
 
     
